@@ -158,6 +158,24 @@ describe('Bluefin App', () => {
     })
 
 
+    it("Deserialize CollectRewards transaction", async()=> {
+
+      const transaction =  await TxBuilder.collectRewards(
+        {
+          pool: '0x0321b68a0fca8c990710d26986ba433d06b351deba9384017cd6175f20466a8f',
+          position: "0xa1cb7abf8a2b40398132ebcbcf9ddcfeccf952ee31a8e87917569f0f74780f44",
+        },
+        testWallet,
+        "sui:mainnet"
+      );
+  
+      const data = await helper.deserialize({transaction} as any);
+ 
+      expect(JSON.stringify(data)).toBe('{"txType":"Other","txSubType":"CollectRewards","intentionData":{"collectRewards":[{"pool":"0x03db251ba509a8d5d8777b6338836082335d93eecbdd09a11e190a1cff51c352","position":"0x0321b68a0fca8c990710d26986ba433d06b351deba9384017cd6175f20466a8f","rewardCoinType":"9753a815080c9a1a1727b4be9abb509014197e78ae09e33c146c786fac3731e0::bpoint::BPOINT"},{"pool":"0x03db251ba509a8d5d8777b6338836082335d93eecbdd09a11e190a1cff51c352","position":"0x0321b68a0fca8c990710d26986ba433d06b351deba9384017cd6175f20466a8f","rewardCoinType":"0000000000000000000000000000000000000000000000000000000000000002::sui::SUI"}]}}');
+
+    })
+
+
   });
   
   describe('Bluefin core main flow', () => {

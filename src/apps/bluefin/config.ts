@@ -11,7 +11,7 @@ export const config = {
   objects: {
     GlobalConfig: '0x03db251ba509a8d5d8777b6338836082335d93eecbdd09a11e190a1cff51c352',
     BasePackage: '0x3492c874c1e3b3e2984e8c41b589e642d4d0a5d6459e5a9cfc2d52fd7c89c267',
-    CurrentPackage: '0x702301e7c6ca527a6f6a83f12c5edf2dcd6ec7a23fb5318ec86d88282eab7057',
+    CurrentPackage: '0xa31282fc0a0ad50cf5f20908cfbb1539a143f5a38912eb8823a8dd6cbf98bc44',
   } as any as IBluefinSpotContracts,
 };
 

@@ -40,6 +40,8 @@ export class BluefinHelper implements IAppHelperInternal<BluefinIntentionData> {
     console.log('Bluefin helper deserialize input: ', input);
     const { transaction } = input;
 
+    console.log(JSON.stringify(transaction));
+
     const decoder = new Decoder(transaction);
 
     const result = decoder.decode();

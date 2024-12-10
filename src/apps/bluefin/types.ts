@@ -22,3 +22,9 @@ export enum TransactionSubType {
   CollectRewards = 'CollectRewards',
   CollectFeeAndRewards = 'CollectFeeAndRewards',
 }
+
+export type RewardCollection = {
+  position: string;
+  pool: string;
+  rewardCoinType: string;
+};
